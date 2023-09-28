@@ -40,6 +40,7 @@
               items: ['$stateParams', 'MenuDataService', function($stateParams, MenuDataService) {
                   return MenuDataService.getItemsForCategory($stateParams.categoryShortName);
               }]
+            }
       });
   }
 
