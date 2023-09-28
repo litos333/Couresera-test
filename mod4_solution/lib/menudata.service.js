@@ -24,7 +24,7 @@
       console.log(categoryShortName);
       return $http({
         method: 'GET',
-        url: (ApiBasePath + '/menu_items/{categoryShortName}.json')
+        url: (ApiBasePath + '/menu_items/' + categoryShortName + '.json')
       }).then(function (response) {
         console.log("The name retrieved by the service is: " + categoryShortName);
         console.log(response.data);
