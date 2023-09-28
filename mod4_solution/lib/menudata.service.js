@@ -21,6 +21,7 @@
     };
 
     service.getItemsForCategory = function (categoryShortName) {
+      console.log(categoryShortName);
       return $http({
         method: 'GET',
         url: (ApiBasePath + '/menu_items/{categoryShortName}.json')
