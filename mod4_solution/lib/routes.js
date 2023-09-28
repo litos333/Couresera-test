@@ -31,7 +31,15 @@
       .state('items', {
         url: '/item/{categoryShortName}',
         templateUrl: 'lib/templates/main-items.template.html',
-        controller: 'ItemsController as items'
+        controller: 'ItemsController as items',
+        params: {
+                    categoryShortName: null,
+                    categoryName: null
+                },
+        resolve: {
+              items: ['$stateParams', 'MenuDataService', function($stateParams, MenuDataService) {
+                  return MenuDataService.getItemsForCategory($stateParams.categoryShortName);
+              }]
       });
   }
 
