@@ -41,7 +41,7 @@
                   return MenuDataService.getItemsForCategory($stateParams.categoryShortName);
               }]
             }
-      };
+      });
   }
 
 })();
